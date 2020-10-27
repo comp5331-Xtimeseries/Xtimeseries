@@ -24,8 +24,8 @@ class DownloadableDatasets(Datasets):
   def __getitem__(self, index):
     return self.data[:,index]
   def download(self):
-    r = requests.get(self.source, allow_redirects=True)
     os.makedirs(os.path.dirname(self.data_path), exist_ok=True)
+    r = requests.get(self.source, allow_redirects=True)
     open(self.data_path, 'wb').write(r.content)
   def load(self):
     features_train=None
@@ -45,8 +45,7 @@ class Electricity(DownloadableDatasets):
     >>> print(dataset[0].shape)
     (26304,)
   """
-  source='https://github.com/laiguokun/multivariate-time-series-data/raw/master\
-  /electricity/electricity.txt.gz'
+  source='https://github.com/laiguokun/multivariate-time-series-data/raw/master/electricity/electricity.txt.gz'
   data_path='./data/electricity.txt.gz'
 
 class ExchangeRate(DownloadableDatasets):
@@ -63,8 +62,7 @@ class ExchangeRate(DownloadableDatasets):
     >>> print(dataset[0].shape)
     (7588,)
   """
-  source='https://github.com/laiguokun/multivariate-time-series-data/raw/master\
-  /exchange_rate/exchange_rate.txt.gz'
+  source='https://github.com/laiguokun/multivariate-time-series-data/raw/master/exchange_rate/exchange_rate.txt.gz'
   data_path='./data/exchange_rate.txt.gz'
 
 class Solar(DownloadableDatasets):
@@ -81,8 +79,7 @@ class Solar(DownloadableDatasets):
     >>> print(dataset[0].shape)
     (52560,)
   """
-  source='https://github.com/laiguokun/multivariate-time-series-data/raw/master\
-  /solar-energy/solar_AL.txt.gz'
+  source='https://github.com/laiguokun/multivariate-time-series-data/raw/master/solar-energy/solar_AL.txt.gz'
   data_path='./data/solar_AL.txt.gz'
 
 class Traffic(DownloadableDatasets):
@@ -100,6 +97,5 @@ class Traffic(DownloadableDatasets):
     >>> print(dataset[0].shape)
     (17544,)
   """
-  source='https://github.com/laiguokun/multivariate-time-series-data/raw/master\
-  /traffic/traffic.txt.gz'
+  source='https://github.com/laiguokun/multivariate-time-series-data/raw/master/traffic/traffic.txt.gz'
   data_path='./data/traffic.txt.gz'
