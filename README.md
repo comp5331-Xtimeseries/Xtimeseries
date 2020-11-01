@@ -4,7 +4,7 @@ TODO
 | ------------- | ------------- | ------------- |
 | ⬜️ | Prepare datasets (medical)  |           |
 | ✅ | Prepare datasets (electrical, solar, exchange rate, traffic)   |  Patrick  |
-| ⬜️ | Prepare datasets (stocks)|              |
+| ✅ | Prepare datasets (stocks)|      Patrick        |
 | ⬜️ | Train mWDN on the datasets  |              |
 | ⬜️ | Train LSTNet on the datasets   |   Patrick           |
 | ⬜️ | Train TPA-LSTM on the datasets |              |
