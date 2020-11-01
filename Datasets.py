@@ -99,3 +99,38 @@ class Traffic(DownloadableDatasets):
   """
   source='https://github.com/laiguokun/multivariate-time-series-data/raw/master/traffic/traffic.txt.gz'
   data_path='./data/traffic.txt.gz'
+
+class SP500(DownloadableDatasets):
+  """
+  This dataset consists of the daily closing stock prices of S&P500 stocks from 
+  2013 to 2018. The dataset contains the closing price and the volumn of the 
+  470 stocks listed in the S&P500 index within the entire timespan. The daily 
+  closing stock prices (First 470 rows) and volumne (the last 470 rows) of each 
+  of the 505 stocks is treated as a time series of 1259 timesteps. 
+  This dataset is extracted from Kaggle [https://www.kaggle.com/camnugent/sandp500].
+
+  Usage:
+    >>> dataset = SP500()
+    >>> print(len(dataset))
+    940
+    >>> print(dataset[0].shape)
+    (1259,)
+    >>> dataset = SP500(include_Volume=False)
+    >>> print(len(dataset))
+    470
+    >>> print(dataset[0].shape)
+    (1259,)
+  """
+  # private repo should be not inaccessible, please download the file directly
+  source='https://github.com/cpwan/Xtimeseries/blob/main/data/S%26P500.csv.gz'
+  data_path='./data/S&P500.csv.gz'
+  def __init__(self,include_Volume=False):
+    super(SP500,self).__init__()
+    if not include_Volume:
+      self.data=self.data[:,:470]
+      
+  def load(self):
+    features_train=None
+    with gzip.open(self.data_path) as f:
+        features_train = pd.read_csv(f,header=[0,1],index_col=[0])
+    return features_train.values
