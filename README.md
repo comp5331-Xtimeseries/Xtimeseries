@@ -6,7 +6,7 @@ TODO
 | ✅ | Prepare datasets (electrical, solar, exchange rate, traffic)   |  Patrick  |
 | ✅ | Prepare datasets (stocks)|      Patrick        |
 | ⬜️ | Train mWDN on the datasets  |              |
-| ⬜️ | Train LSTNet on the datasets   |   Patrick           |
+| ✅ | Train LSTNet on the datasets   |   Patrick           |
 | ⬜️ | Train TPA-LSTM on the datasets |              |
 | ⬜️ | Apply SHAP on mWDN |              |
 | ⬜️ | Apply SHAP on LSTNet |              |
