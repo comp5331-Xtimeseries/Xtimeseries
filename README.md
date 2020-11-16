@@ -2,7 +2,7 @@
 TODO
 | Done?| Tasks  | Assigned to |
 | ------------- | ------------- | ------------- |
-| ⬜️ | Prepare datasets (medical)  |           |
+| ⬜️ | Prepare datasets (medical)  |  ZHANG, Shunkang       |
 | ✅ | Prepare datasets (electrical, solar, exchange rate, traffic)   |  Patrick  |
 | ✅ | Prepare datasets (stocks)|      Patrick        |
 | ⬜️ | Train mWDN on the datasets  |   Huimin Wu  |
@@ -10,4 +10,4 @@ TODO
 | ⬜️ | Train TPA-LSTM on the datasets |      Isabella        |
 | ⬜️ | Apply SHAP on mWDN |              |
 | ✅ | Apply SHAP on LSTNet |     Zhihan         |
-| ⬜️ | Apply SHAP on TPA-LSTM  |              |
+| ⬜️ | Apply SHAP on TPA-LSTM  |  ZHANG, Shunkang         |
