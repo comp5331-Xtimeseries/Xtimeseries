@@ -37,6 +37,7 @@ class Electricity(DownloadableDatasets):
   """
   This dataset is retrieved from 
   https://github.com/laiguokun/multivariate-time-series-data
+  It records the hourly electricity consumptions of 321 clients from 2012 to 2014.
 
   Usage:
     >>> dataset = Electricity()
@@ -68,7 +69,7 @@ class ExchangeRate(DownloadableDatasets):
 class Solar(DownloadableDatasets):
   """
   This dataset consists of the solar power production records in the year of 
-  2006. It is sampled every 10minutes from 137 PV plants in Alabama State. Each 
+  2006. It is sampled every 10 minutes from 137 PV plants in Alabama State. Each 
   production record of the 137 PVplants is treated as a time series with 52,560 
   time steps.
 
