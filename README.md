@@ -9,5 +9,5 @@ TODO
 | ✅ | Train LSTNet on the datasets   |   Patrick           |
 | ⬜️ | Train TPA-LSTM on the datasets |      Isabella        |
 | ⬜️ | Apply SHAP on mWDN |              |
-| ⬜️ | Apply SHAP on LSTNet |              |
+| ✅ | Apply SHAP on LSTNet |     Zhihan         |
 | ⬜️ | Apply SHAP on TPA-LSTM  |              |
