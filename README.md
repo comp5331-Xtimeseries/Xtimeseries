@@ -10,4 +10,4 @@ TODO
 | ✅ | Train TPA-LSTM on the datasets |      Isabella        |
 | ✅ | Apply SHAP on mWDN |      Albert        |
 | ✅ | Apply SHAP on LSTNet |     Zhihan         |
-| ⬜️ | Apply SHAP on TPA-LSTM  |  ZHANG, Shunkang         |
+| ⬜️ | Apply SHAP on TPA-LSTM (version not compatible)  |  ZHANG, Shunkang         |
