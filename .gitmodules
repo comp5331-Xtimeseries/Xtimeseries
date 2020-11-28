@@ -1,0 +1,12 @@
+[submodule "TPA-LSTM-NotOrigional"]
+	path = TPA-LSTM-NotOrigional
+	url = https://github.com/comp5331-Xtimeseries/TPA-LSTM-NotOrigional.git
+[submodule "TPALSTM-Origional"]
+	path = TPALSTM-Origional
+	url = https://github.com/comp5331-Xtimeseries/TPALSTM-Origional.git
+[submodule "LSTNet"]
+	path = LSTNet
+	url = https://github.com/comp5331-Xtimeseries/LSTNet.git
+[submodule "mWDN"]
+	path = mWDN
+	url = https://github.com/comp5331-Xtimeseries/mWDN.git
