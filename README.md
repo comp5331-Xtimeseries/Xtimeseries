@@ -1,3 +1,5 @@
+# SHAP for Visual Explanations of Time Series Models
+
 - [Time series models](#time-series-models)
   * [LSTNet](#lstnet)
     + [Usage](#usage)
@@ -19,6 +21,11 @@
     + [Usage](#usage-4)
     + [File structure](#file-structure-3)
     + [Environment](#environment-4)
+  * [mWDN](#mwdn-1)
+    + [Usage](#usage-5)
+    + [File structure](#file-structure-4)
+    + [Environment](#environment-5)
+
 
 
 
@@ -153,8 +160,29 @@ python3 shap_heatmap.py -m exchange_rate.pt -d exchange_rate.txt -o heatmap.pdf
 
 ### File structure
 
-The script calculates and generates the heatmaps of a model and the corresponding dataset.
+`shap_heatmap.py` The script calculates and generates the heatmaps of a model and the corresponding dataset.
 
 ### Environment 
 
 macOS
+
+
+## mWDN
+
+### Usage
+
+First, move to the `mWDN` subfolder.
+
+Open `mWDN_SHAP.ipynb` with jupyter notebook.
+
+### File structure
+
+`mWDN_SHAP.ipynb` does the following:
+1. Make a /stats folder
+2. Run the group of cells under "Libraries"
+3. Run one group of cells under "mWDN Exchange Rate", "mWDN Solar", "mWDN Electricity", "mWDN Traffic", depending on the desired model to visualize
+4. Run the group of cells under "Visualization"
+5. Results are saved in the /stats folder
+### Environment 
+
+Linux
