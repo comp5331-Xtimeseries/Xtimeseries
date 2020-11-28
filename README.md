@@ -15,16 +15,18 @@
     + [Environment](#environment-2)
   * [mWDN](#mwdn)
     + [Usage](#usage-3)
+    + [File structure](#file-structure-3)
     + [Environment](#environment-3)
 - [SHAP explanation](#shap-explanation)
   * [LSTNet](#lstnet-1)
     + [Usage](#usage-4)
-    + [File structure](#file-structure-3)
+    + [File structure](#file-structure-4)
     + [Environment](#environment-4)
   * [mWDN](#mwdn-1)
     + [Usage](#usage-5)
-    + [File structure](#file-structure-4)
+    + [File structure](#file-structure-5)
     + [Environment](#environment-5)
+
 
 
 
@@ -131,16 +133,32 @@ pip install -r requirements.txt
 ## mWDN
 
 ### Usage
-
-First, move to the `mWDN` subfolder.
-
-
 Training and testing on our dataset-of-interest:
 ```
 sh run.sh
 ```
+### File structure
+`data/`: It contains all dataset-of-interest.\
+`log.*.txt`: They are log files that contain all output of training.\
+`main.py`: It is the main function for training.\
+`model/`: It contains all trained models.\
+`models/`: It contains all files to run wMDN models correctly.\
+`models/InceptionTime.py`: Inception is the classifier fed with decompositions collected from mWDN framewrok.\
+`models/layers.py`: It contains the implementation of building blocks of Inception.\
+`models/mWDN.py`: It is the implementation of mWDN.\
+`models/utils.py`: It contains the implementation of "feeding mWDN decomposed sub-series to a classifier".\
+`Optim.py`: It is a wrapper of all supported optimizer.\
+`run.sh`: The script to train the model and get the results we reported.\
+`utils.py`: It is how we organize the dataset.
 
 ### Environment 
+Operating system\
+DISTRIB_ID=Ubuntu\
+DISTRIB_RELEASE=18.10\
+DISTRIB_CODENAME=cosmic\
+DISTRIB_DESCRIPTION="Ubuntu 18.10"
+
+Running environment\
 ```
 conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
 ```
