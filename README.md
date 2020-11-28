@@ -1,38 +1,38 @@
-# Xtimeseries
-- [LSTNet](#lstnet)
-  * [Paper](#paper)
-  * [File structure](#file-structure)
-  * [Usage](#usage)
-  * [Environment](#environment)
-- [TPA-LSTM Original](#tpa-lstm-original)
-  * [Paper](#paper-1)
-  * [Usage](#usage-1)
-  * [File structure](#file-structure-1)
-  * [Environment](#environment-1)
-- [TPA-LSTM Pytorch Implementation](#tpa-lstm-pytorch-implementation)
-  * [Usage](#usage-2)
-  * [File structure](#file-structure-2)
-  * [Environment](#environment-2)
-- [mWDN](#mwdn)
-  * [Paper](#paper-2)
-  * [Usage](#usage-3)
-  * [Environment](#environment-3)
+- [Time series models](#time-series-models)
+  * [LSTNet](#lstnet)
+    + [Usage](#usage)
+    + [File structure](#file-structure)
+    + [Environment](#environment)
+  * [TPA-LSTM Original](#tpa-lstm-original)
+    + [Usage](#usage-1)
+    + [File structure](#file-structure-1)
+    + [Environment](#environment-1)
+  * [TPA-LSTM Pytorch Implementation](#tpa-lstm-pytorch-implementation)
+    + [Usage](#usage-2)
+    + [File structure](#file-structure-2)
+    + [Environment](#environment-2)
+  * [mWDN](#mwdn)
+    + [Usage](#usage-3)
+    + [Environment](#environment-3)
+- [SHAP explanation](#shap-explanation)
+  * [LSTNet](#lstnet-1)
+    + [Usage](#usage-4)
+    + [File structure](#file-structure-3)
+    + [Environment](#environment-4)
 
 
 
 
 
 
+# Time series models
 
 ## LSTNet
 
-### Paper
-
-Modeling Long- and Short-Term Temporal Patterns with Deep Neural Networks.(https://arxiv.org/abs/1703.07015)
-
-This repo is forked from and modified on the authors' repo: https://github.com/laiguokun/LSTNet
-
 ### Usage
+
+First, move to the `LSTNet` subfolder.
+
 Check the `save` folder for the trained models and their configurations
 
 In summary, we ran 
@@ -66,12 +66,11 @@ Python 3.6 and PyTorch 1.6.0
 
 ## TPA-LSTM Original
 
-### Paper
-
-Original Implementation of [''Temporal Pattern Attention for Multivariate Time Series Forecasting''](https://arxiv.org/abs/1809.04206).
-
-
 ### Usage
+
+First, move to the `TPALSTM-Origional` subfolder.
+
+
 Training
 ```
 $ ./runTrainAll.sh
@@ -82,8 +81,8 @@ $ ./runTestAll.sh
 ```
 
 ### File structure
-- The main.py excute all the training or testing
-- The model and its supplementary was stored in lib
+- The `main.py` excute all the training or testing
+- The model and its supplementary was stored in `lib`
 
 ### Environment
 
@@ -91,15 +90,15 @@ $ ./runTestAll.sh
 
 You can check and install other dependencies in `requirements.txt`.
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 ## TPA-LSTM Pytorch Implementation
 
-The code was adapted from https://github.com/jingw2/demand_forecast
-This implementation is different from the paper.
-
-
 ### Usage
+
+First, move to the `TPA-LSTM-NotOrigional` subfolder.
+
+
 Use either of the command to train, evaluate and get the result of the specific dataset
 ```
 ./run_elec.sh
@@ -109,11 +108,11 @@ Use either of the command to train, evaluate and get the result of the specific 
 ```
 
 ### File structure
-- ./data store the downloaded dataset
-- ./model store the trained model
-- ./result store the training, evaluation and testing result
-- main.py execute the training, evaluation and testing process
-- tpaLSTM.py has the model structure  
+- `./data` store the downloaded dataset
+- `./model` store the trained model
+- `./result` store the training, evaluation and testing result
+- `main.py` execute the training, evaluation and testing process
+- `tpaLSTM.py` has the model structure  
 
 ### Environment
 Please install [Pytorch](https://pytorch.org/) before run it, and
@@ -124,17 +123,38 @@ pip install -r requirements.txt
 
 ## mWDN
 
-### Paper
-
-Wang, J., Wang, Z., Li, J., & Wu, J. (2018, July). Multilevel wavelet decomposition network for interpretable time series analysis. In Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (pp. 2437-2446).
-
-Source repo: https://github.com/timeseriesAI/tsai
-
 ### Usage
-Training and testing on our dataset-of-interest:
-sh run.sh
 
+First, move to the `mWDN` subfolder.
+
+
+Training and testing on our dataset-of-interest:
+```
+sh run.sh
+```
 
 ### Environment 
+```
 conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch
+```
 
+# SHAP explanation
+
+## LSTNet
+
+### Usage
+
+First, move to the `LSTNet SHAP` subfolder.
+
+an example to show how to run the program
+```
+python3 shap_heatmap.py -m exchange_rate.pt -d exchange_rate.txt -o heatmap.pdf
+```
+
+### File structure
+
+The script calculates and generates the heatmaps of a model and the corresponding dataset.
+
+### Environment 
+
+macOS
