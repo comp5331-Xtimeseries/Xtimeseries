@@ -1,5 +1,8 @@
 # SHAP for Visual Explanations of Time Series Models
-
+## Report
+[Final report](https://github.com/comp5331-Xtimeseries/Xtimeseries/blob/main/COMP_5331_Final_Report.pdf)
+[Slides] (https://github.com/comp5331-Xtimeseries/Xtimeseries/blob/main/slides.pdf)
+## Code structure
 - [Time series models](#time-series-models)
   * [LSTNet](#lstnet)
     + [Usage](#usage)
